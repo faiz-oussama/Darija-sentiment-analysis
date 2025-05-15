@@ -1,0 +1,302 @@
+/* Info Card */
+.info-car/* Modern and sleek CSS for Darija Sentiment Analysis */
+
+/* Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #7DF9FF;
+    --secondary-color: #88f7a7;
+    --dark-color: #1a1a1a;
+    --light-color: #ffffff;
+    --border-radius: 15px;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e2e7f0 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(90deg, var(--dark-color), #2c2c2c);
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.header:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(125, 249, 255, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+    animation: pulse 15s infinite linear;
+    z-index: 1;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 0.3; }
+}
+
+.header h1 {
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.header span {
+    color: var(--primary-color); /* Electric blue for "Darija" */
+    text-shadow: 0 0 10px rgba(125, 249, 255, 0.5);
+    position: relative;
+}
+
+.header span::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: var(--primary-color);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.header:hover span::after {
+    transform: scaleX(1);
+}
+
+/* Container and content */
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+}
+
+/* Input Section */
+.input-section {
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.input-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.input-section h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.input-section h3:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+#text-input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    resize: none;
+    background-color: #f9f9f9;
+}
+
+#text-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(125, 249, 255, 0.25);
+    background-color: var(--light-color);
+}
+
+.analyze-btn {
+    background: linear-gradient(45deg, var(--dark-color) 0%, #2c2c2c 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: auto;
+    min-width: 200px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.analyze-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.analyze-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.analyze-btn:hover:before {
+    left: 0;
+}
+
+.analyze-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18);
+    color: var(--dark-color);
+}
+
+.analyze-btn:hover span {
+    color: var(--dark-color);
+}
+
+.analyze-btn:active {
+    transform: translateY(1px);
+}
+
+/* Results Section */
+#results-section {
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    height: 100%;
+    min-height: 350px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+#results-section:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+#results-section h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+#results-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+#myChart {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-style: italic;
+    border-radius: 10px;
+    background-color: rgba(249, 249, 249, 0.5);
+    padding: 15px;
+}
+
+/* Loading animation */
+.loading {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.loading:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid var(--primary-color);
+    border-color: var(--primary-color) transparent var(--primary-color) transparent;
+    animation: loading 1.2s infinite;
+}
+
+@keyframes loading {
+    0% { transform: rotate(0); animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+    50% { transform: rotate(180deg); animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+}
+
+/* Animation for chart loading */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fadeIn {
+    animation: fadeIn 0.6s ease forwards;
+}
