@@ -77,7 +77,7 @@ Darija-Sentiment-Analysis/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/Darija-Sentiment-Analysis.git
+   git clone https://github.com/faizoussama/Darija-Sentiment-Analysis.git
    cd Darija-Sentiment-Analysis
    ```
 
