@@ -1,8 +1,38 @@
-# Darija Sentiment Analysis
+# 🔍 Darija Sentiment Analysis
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![PyTorch](https://img.shields.io/badge/PyTorch-1.9+-red.svg)
+![Next.js](https://img.shields.io/badge/Next.js-13+-black.svg)
+![BERT](https://img.shields.io/badge/BERT-Multilingual-green.svg)
 
 A modern web application for sentiment analysis of Darija (Moroccan Arabic dialect) text.
 
-## Project Overview
+<p align="center">
+  <i>Analyze sentiment in Darija text with state-of-the-art machine learning</i>
+</p>
+
+---
+
+## 📋 Table of Contents
+
+- [Project Overview](#-project-overview)
+- [Features](#-features)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Application](#running-the-application)
+- [Usage](#-usage)
+- [Model Information](#-model-information)
+- [Technologies Used](#-technologies-used)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Acknowledgments](#-acknowledgments)
+
+---
+
+## 🌟 Project Overview
 
 This project provides a sentiment analysis tool that can determine whether a given text in Darija has a positive, negative, or neutral sentiment. It consists of three main components:
 
@@ -10,16 +40,20 @@ This project provides a sentiment analysis tool that can determine whether a giv
 - **Flask API**: Backend service that handles text processing and sentiment prediction
 - **Next.js Frontend**: Modern, responsive web interface for user interaction
 
-## Features
+---
 
-- Real-time sentiment analysis of Darija text
-- Visual representation of sentiment scores
-- Responsive design for desktop and mobile devices
-- Dark theme with a modern interface
+## ✨ Features
 
-## Project Structure
+- ⚡ Real-time sentiment analysis of Darija text
+- 📊 Visual representation of sentiment scores
+- 📱 Responsive design for desktop and mobile devices
+- 🌙 Dark theme with a modern interface
 
-```
+---
+
+## 📂 Project Structure
+
+```bash
 Darija-Sentiment-Analysis/
 ├── datasets/               # Training and testing datasets
 ├── flask-api/              # Flask backend API service
@@ -28,7 +62,9 @@ Darija-Sentiment-Analysis/
 └── darija_sentiment_model.pt # Trained sentiment analysis model
 ```
 
-## Getting Started
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -74,18 +110,26 @@ Darija-Sentiment-Analysis/
 
 3. Open your browser and navigate to `http://localhost:3000`
 
-## Usage
+---
+
+## 💡 Usage
 
 1. Enter Darija text in the input field
 2. Click the "Analyze" button
 3. View the sentiment analysis results displayed below with positive and negative probability scores
 
-## Model Information
+<p align="center">
+  <i>The app will process your text and display probability scores for positive and negative sentiment</i>
+</p>
+
+---
+
+## 🧠 Model Information
 
 The sentiment analysis model is trained on a dataset of Darija text with labeled sentiments. The model uses the following architecture:
 
 - **Base Model**: BERT (bert-base-multilingual-cased)
-- **Architecture**: Fine-tuned BERT with a classification head (768 -> 50 -> 2)
+- **Architecture**: Fine-tuned BERT with a classification head (768 → 50 → 2)
 - **Classes**: Positive and Negative sentiment
 - **Training**: The model was trained for 2 epochs with evaluation metrics showing 82% accuracy
 
@@ -93,22 +137,38 @@ The model was trained on datasets from:
 - MSAC (Arabic Sentiment Analysis corpus)
 - OMCD (Offensive Moroccan Comments Dataset)
 
-## Technologies Used
+---
 
-- **Backend**: Python, Flask, PyTorch, Transformers
-- **Frontend**: Next.js, React, Bootstrap
-- **Machine Learning**: BERT, PyTorch
-- **Development**: Jupyter Notebook (for model training)
+## 🛠️ Technologies Used
 
-## Contributing
+| Component | Technologies |
+|-----------|-------------|
+| **Backend** | Python, Flask, PyTorch, Transformers |
+| **Frontend** | Next.js, React, Bootstrap |
+| **Machine Learning** | BERT, PyTorch |
+| **Development** | Jupyter Notebook (for model training) |
+
+---
+
+## 👥 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+---
 
-## Acknowledgments
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
 
 - HuggingFace Transformers library for providing pre-trained models
 - Dataset sources: MSAC and OMCD projects for Arabic sentiment data 
