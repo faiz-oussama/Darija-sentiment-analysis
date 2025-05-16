@@ -1,0 +1,15 @@
+darija-sentiment-analysis/node_modules
+darija-sentiment-analysis/dist
+darija-sentiment-analysis/build
+darija-sentiment-analysis/public/
+darija-sentiment-analysis/package-lock.json
+darija-sentiment-analysis/package.json
+
+darija-sentiment-analysis/.next/
+darija-sentiment-analysis/.env
+darija-sentiment-analysis/.env.local
+darija-sentiment-analysis/.env.development.local
+darija-sentiment-analysis/.env.test.local
+darija-sentiment-analysis/.env.production.local
+
+darija-sentiment-analysis/darija_sentiment_model.pt
