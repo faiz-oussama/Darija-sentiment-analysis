@@ -69,3 +69,50 @@ The frontend will run on `http://localhost:3000`.
 - Clean, responsive UI with Bootstrap
 - Real-time feedback on sentiment prediction
 - Visual representation of positive/negative probabilities
+
+# Darija Sentiment Analysis Frontend
+
+This is the frontend part of the Darija Sentiment Analysis project, built with Next.js.
+
+## Setup Instructions
+
+1. Make sure you have Node.js 18+ installed
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. The frontend will be available at http://localhost:3000
+
+## Building for Production
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+To run the production build:
+
+```bash
+npm start
+```
+
+## Structure
+
+- `/app`: Contains the Next.js app routes and pages
+- `/components`: Reusable React components
+- `/lib`: Utility functions and hooks
+- `/public`: Static assets (images, fonts, etc.)
+
+## API Integration
+
+The frontend communicates with the Flask API running at `http://localhost:5000/predict` for sentiment analysis.
+
+Make sure the Flask API is running before using the sentiment analysis feature.
